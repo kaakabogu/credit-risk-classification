@@ -57,7 +57,7 @@ For high-risk loan model prediction performance
   •	Overall recall score = 100%
 
 ## Summary
+The logistic regression model using the original data had an overall balanced accuracy score of 99.5% prediciting a loan's fate as either healthy or high-risk. Although prediction of healthy loans had a false positivity rate (FPR) of 0.5%, a 0.3% FPR occurred when predicting high-risk loans. The RandomOverSampler module was implemented to observe the consequence of this potential bias.
 
+Using the RandomOverSampler, the FPR was maintained the same 0.5% for healthy loan prediction and was 0.3% for high-risk loans. The RandomOverSampler is speculative as it is based on previous data and not real or new data. In fact, the RandomOverSampler may just repeat previous data points in order to establish a sample size more aligned to that of the majority class (the healthy loans). So while the RandomOverSampler model is more precise at predicting high-risk loans, it should be understood that this model is not based on real world data. Ideally, more real world data regarding high-risk loans should be used to correct for the data imbalance ultimately leading to validation of the prediction model. But in the absence of new data, one, the RandomOverSampler may be used but should be done knowing its inherent caveats, two, other models such as constructing a prediction model that under-samples the healthy loans to balance the dataset should be used in conjunction to lend further creedence and to glean more insight into the efficacy of the prediction model.
 
-
- 
